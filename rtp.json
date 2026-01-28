@@ -1,0 +1,49 @@
+{
+  "task_metadata": {
+    "project": "Slot game RTP modeling (not used in production but here for empirical analysis)",
+    "simulation_basis": "50,000,000 spins per model",
+    "target_rtp": "96.0%"
+  },
+  "models": [
+    {
+      "name": "Neon Fruit",
+      "profile": "Low volatility",
+      "statistics": {
+        "base_game": {
+          "win_lines": { "hit_rate": "1 in 3.00", "average_payout": "1.58x", "rtp": "52.60%" },
+          "feature_1": { "hit_rate": "1 in 14.43", "average_payout": "4.11x", "rtp": "28.52%" },
+          "free_spins_trigger": { "hit_rate": "1 in 120.99", "average_payout": "17.97x", "rtp": "14.85%" }
+        },
+        "free_spins_feature": {
+          "spins_awarded": 5,
+          "win_lines": { "hit_rate": "1 in 2.15", "average_payout": "4.26x", "rtp": "Included in trigger" },
+          "feature_1": { "hit_rate": "1 in 6.65", "average_payout": "10.70x", "rtp": "Included in trigger" }
+        }
+      },
+      "risk_metrics": {
+        "volatility_sd": 3.07,
+        "max_exposure": "212.90x"
+      }
+    },
+    {
+      "name": "Inferno 7s",
+      "profile": "High volatility",
+      "statistics": {
+        "base_game": {
+          "win_lines": { "hit_rate": "1 in 3.26", "average_payout": "0.83x", "rtp": "25.50%" },
+          "feature_1": { "hit_rate": "1 in 35.70", "average_payout": "3.80x", "rtp": "10.64%" },
+          "free_spins_trigger": { "hit_rate": "1 in 241.28", "average_payout": "144.32x", "rtp": "59.81%" }
+        },
+        "free_spins_feature": {
+          "spins_awarded": 10,
+          "win_lines": { "hit_rate": "1 in 2.43", "average_payout": "10.81x", "rtp": "Included in trigger" },
+          "feature_1": { "hit_rate": "1 in 4.00", "average_payout": "39.92x", "rtp": "Included in trigger" }
+        }
+      },
+      "risk_metrics": {
+        "volatility_sd": 15.93,
+        "max_exposure": "2532.35x"
+      }
+    }
+  ]
+}
